@@ -36,7 +36,7 @@ const CategorieSideBar = (props) => {
                     <ul className="nav"> 
                         { categories.map(categorie => {
                         return (
-                            <li><a href="" onClick={(e) => {handleSubmit(categorie?.id)}}>{categorie.nom}</a></li>
+                            <li><a onClick={(e) => {handleSubmit(categorie?.id)}}>{categorie.nom}</a></li>
                         )
                         })}
                     </ul>

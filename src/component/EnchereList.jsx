@@ -28,12 +28,12 @@ const ProductList = (props) => {
                     <div className="col col-sm-6 col-md-4 text-right">
                         <div className="pagination-container">
                             <ul className="list-inline list-unstyled">
-                                <li className="prev"><a href=""><i className="fa fa-angle-left"></i></a></li>
-                                <li><a href="">1</a></li>	
-                                <li className="active"><a href="">2</a></li>	
-                                <li><a href="">3</a></li>	
-                                <li><a href="">4</a></li>	
-                                <li className="next"><a href=""><i className="fa fa-angle-right"></i></a></li>
+                                <li className="prev"><a ><i className="fa fa-angle-left"></i></a></li>
+                                <li><a >1</a></li>	
+                                <li className="active"><a >2</a></li>	
+                                <li><a >3</a></li>	
+                                <li><a >4</a></li>	
+                                <li className="next"><a ><i className="fa fa-angle-right"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -75,12 +75,12 @@ const ProductList = (props) => {
                     <div className="text-right">
                         <div className="pagination-container">
                             <ul className="list-inline list-unstyled">
-                                <li className="prev"><a href=""><i className="fa fa-angle-left"></i></a></li>
-                                <li><a href="">1</a></li>	
-                                <li className="active"><a href="">2</a></li>	
-                                <li><a href="">3</a></li>	
-                                <li><a href="">4</a></li>	
-                                <li className="next"><a href=""><i className="fa fa-angle-right"></i></a></li>
+                                <li className="prev"><a ><i className="fa fa-angle-left"></i></a></li>
+                                <li><a >1</a></li>	
+                                <li className="active"><a >2</a></li>	
+                                <li><a >3</a></li>	
+                                <li><a >4</a></li>	
+                                <li className="next"><a ><i className="fa fa-angle-right"></i></a></li>
                             </ul>
                         </div>
                     </div>

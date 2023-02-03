@@ -55,31 +55,31 @@ const Header = () => {
                     <div className="header-top-inner">
                         <div className="cnt-account">
                             <ul className="list-unstyled">
-                                <li><a href=""><i className="icon fa fa-user"></i>My Account</a></li>
-                                <li><a href=""><i className="icon fa fa-heart"></i>Wishlist</a></li>
-                                <li><a href=""><i className="icon fa fa-shopping-cart"></i>My Cart</a></li>
-                                <li><a href=""><i className="icon fa fa-check"></i>Checkout</a></li>
-                                <li><a href=""><i className="icon fa fa-lock"></i>Login</a></li>
+                                <li><a ><i className="icon fa fa-user"></i>My Account</a></li>
+                                <li><a ><i className="icon fa fa-heart"></i>Wishlist</a></li>
+                                <li><a ><i className="icon fa fa-shopping-cart"></i>My Cart</a></li>
+                                <li><a ><i className="icon fa fa-check"></i>Checkout</a></li>
+                                <li><a ><i className="icon fa fa-lock"></i>Login</a></li>
                             </ul>
                         </div>
 
                         <div className="cnt-block">
                             <ul className="list-unstyled list-inline">
                                 <li className="dropdown dropdown-small">
-                                    <a href="" className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span className="value">USD </span><b className="caret"></b></a>
+                                    <a  className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span className="value">USD </span><b className="caret"></b></a>
                                     <ul className="dropdown-menu">
-                                        <li><a href="">USD</a></li>
-                                        <li><a href="">INR</a></li>
-                                        <li><a href="">GBP</a></li>
+                                        <li><a >USD</a></li>
+                                        <li><a >INR</a></li>
+                                        <li><a >GBP</a></li>
                                     </ul>
                                 </li>
 
                                 <li className="dropdown dropdown-small">
-                                    <a href="" className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span className="value">English </span><b className="caret"></b></a>
+                                    <a  className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span className="value">English </span><b className="caret"></b></a>
                                     <ul className="dropdown-menu">
-                                        <li><a href="">English</a></li>
-                                        <li><a href="">French</a></li>
-                                        <li><a href="">German</a></li>
+                                        <li><a >English</a></li>
+                                        <li><a >French</a></li>
+                                        <li><a >German</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -101,7 +101,7 @@ const Header = () => {
                             <form>
                                 <div className="control-group">
                                     <input className="search-field"  placeholder="Rechercher..." />
-                                    <a className="search-button" href="" ></a>    
+                                    <a className="search-button"  ></a>    
                                 </div>
                             </form>
                         </div>
@@ -128,7 +128,7 @@ const Header = () => {
                                         <Link to = {'/'}>Acceuil</Link>
                                     </li>
                                     <li className="dropdown yamm mega-menu">
-                                        <a href="" onClick={actionMyAccount}>Mon compte</a>
+                                        <a onClick={actionMyAccount}>Mon compte</a>
                                     </li>
                                     <li className="active dropdown yamm-fw">
                                        {logout}

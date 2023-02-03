@@ -46,7 +46,7 @@ class Footer extends Component{
                                                 </span>
                                             </div>
                                             <div className="media-body">
-                                                <span><a href="">flipmart@themesground.com</a></span>
+                                                <span><a >flipmart@themesground.com</a></span>
                                             </div>
                                         </li>
                                     </ul>
@@ -59,11 +59,11 @@ class Footer extends Component{
 
                                 <div className="module-body">
                                     <ul className='list-unstyled'>
-                                        <li className="first"><a href="" title="Contact us">My Account</a></li>
-                                        <li><a href="" title="About us">Order History</a></li>
-                                        <li><a href="" title="faq">FAQ</a></li>
-                                        <li><a href="" title="Popular Searches">Specials</a></li>
-                                        <li className="last"><a href="" title="Where is my order?">Help Center</a></li>
+                                        <li className="first"><a  title="Contact us">My Account</a></li>
+                                        <li><a  title="About us">Order History</a></li>
+                                        <li><a  title="faq">FAQ</a></li>
+                                        <li><a  title="Popular Searches">Specials</a></li>
+                                        <li className="last"><a  title="Where is my order?">Help Center</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -74,11 +74,11 @@ class Footer extends Component{
 
                                 <div className="module-body">
                                     <ul className='list-unstyled'>
-                                        <li className="first"><a title="Your Account" href="">About us</a></li>
-                                        <li><a title="Information" href="">Customer Service</a></li>
-                                        <li><a title="Addresses" href="">Company</a></li>
-                                        <li><a title="Addresses" href="">Investor Relations</a></li>
-                                        <li className="last"><a title="Orders History" href="">Advanced Search</a></li>
+                                        <li className="first"><a title="Your Account" >About us</a></li>
+                                        <li><a title="Information" >Customer Service</a></li>
+                                        <li><a title="Addresses" >Company</a></li>
+                                        <li><a title="Addresses" >Investor Relations</a></li>
+                                        <li className="last"><a title="Orders History" >Advanced Search</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -89,10 +89,10 @@ class Footer extends Component{
 
                                 <div className="module-body">
                                     <ul className='list-unstyled'>
-                                        <li className="first"><a href="" title="About us">Shopping Guide</a></li>
-                                        <li><a href="" title="Blog">Blog</a></li>
-                                        <li><a href="" title="Company">Company</a></li>
-                                        <li><a href="" title="Investor Relations">Investor Relations</a></li>
+                                        <li className="first"><a  title="About us">Shopping Guide</a></li>
+                                        <li><a  title="Blog">Blog</a></li>
+                                        <li><a  title="Company">Company</a></li>
+                                        <li><a  title="Investor Relations">Investor Relations</a></li>
                                         <li className=" last"><a href="contact-us.html" title="Suppliers">Contact Us</a></li>
                                     </ul>
                                 </div>
@@ -105,13 +105,13 @@ class Footer extends Component{
                     <div className="container">
                         <div className="col-xs-12 col-sm-6 no-padding social">
                             <ul className="link">
-                            <li className="fb pull-left"><a target="_blank" rel="nofollow" href="" title="Facebook"></a></li>
-                            <li className="tw pull-left"><a target="_blank" rel="nofollow" href="" title="Twitter"></a></li>
-                            <li className="googleplus pull-left"><a target="_blank" rel="nofollow" href="" title="GooglePlus"></a></li>
-                            <li className="rss pull-left"><a target="_blank" rel="nofollow" href="" title="RSS"></a></li>
-                            <li className="pintrest pull-left"><a target="_blank" rel="nofollow" href="" title="PInterest"></a></li>
-                            <li className="linkedin pull-left"><a target="_blank" rel="nofollow" href="" title="Linkedin"></a></li>
-                            <li className="youtube pull-left"><a target="_blank" rel="nofollow" href="" title="Youtube"></a></li>
+                            <li className="fb pull-left"><a target="_blank" rel="nofollow"  title="Facebook"></a></li>
+                            <li className="tw pull-left"><a target="_blank" rel="nofollow"  title="Twitter"></a></li>
+                            <li className="googleplus pull-left"><a target="_blank" rel="nofollow"  title="GooglePlus"></a></li>
+                            <li className="rss pull-left"><a target="_blank" rel="nofollow"  title="RSS"></a></li>
+                            <li className="pintrest pull-left"><a target="_blank" rel="nofollow"  title="PInterest"></a></li>
+                            <li className="linkedin pull-left"><a target="_blank" rel="nofollow"  title="Linkedin"></a></li>
+                            <li className="youtube pull-left"><a target="_blank" rel="nofollow"  title="Youtube"></a></li>
                             </ul>
                         </div>
                         <div className="col-xs-12 col-sm-6 no-padding">
