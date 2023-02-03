@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React from "react";
 
 const MiserList = (props) => {
     const mises = props?.data;

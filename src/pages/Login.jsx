@@ -1,4 +1,4 @@
-import React, { Component,useState, useEffect  } from "react";
+import React, { useState  } from "react";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 import { useNavigate } from "react-router-dom";
@@ -29,7 +29,7 @@ const LoginForm = () => {
                 console.log("enchereID vita login "+enchereID);
                 if( data?.status === "200" ){
                    localStorage.setItem('token', JSON.stringify(data?.data));
-                   if( enchereID != undefined ){
+                   if( enchereID !== undefined ){
                         navigate("/miser/"+enchereID);
                     } else{
                         navigate("/");

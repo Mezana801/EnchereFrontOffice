@@ -1,4 +1,4 @@
-import React, { Component,useState, useEffect  } from "react";
+import React, { useState, useEffect  } from "react";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 import EnchereCard from "../component/EnchereCard";
@@ -19,33 +19,33 @@ import {useParams  } from 'react-router-dom';
 const EnchereDetail = () => {
     const {id} = useParams();
     const [enchere,setenchere] = useState([]);
-
-    const getEnchere = () => {
-        const url = "https://wsfrontofficemobile-production-f9f5.up.railway.app/enchere/"+id;
-        fetch(url, {
-           method: 'GET',
-           headers: {"Access-Control-Allow-Origin": "*",'Content-Type': 'application/json'},
-        }).then(res => res.json())
-        .then(data =>{
-            setenchere(data.data);
-        }) 
-    }
-
     const [categories,setcategories] = useState([]);
 
-    const getAllCategorie = () => {
-        const url = "https://wsfrontofficemobile-production-f9f5.up.railway.app/categorie";
-        fetch(url, {
-           method: 'GET',
-           headers: {"Access-Control-Allow-Origin": "*",'Content-Type': 'application/json'},
-        }).then(res => res.json())
-        .then(data =>{
-            setcategories(data.data);
-            console.log("categ "+JSON.stringify(categories));
-        }) 
-    }
-
     useEffect( () => {
+        const getEnchere = () => {
+            const url = "https://wsfrontofficemobile-production-f9f5.up.railway.app/enchere/"+id;
+            fetch(url, {
+               method: 'GET',
+               headers: {"Access-Control-Allow-Origin": "*",'Content-Type': 'application/json'},
+            }).then(res => res.json())
+            .then(data =>{
+                setenchere(data.data);
+            }) 
+        }
+    
+        const getAllCategorie = () => {
+            const url = "https://wsfrontofficemobile-production-f9f5.up.railway.app/categorie";
+            fetch(url, {
+               method: 'GET',
+               headers: {"Access-Control-Allow-Origin": "*",'Content-Type': 'application/json'},
+            }).then(res => res.json())
+            .then(data =>{
+                setcategories(data.data);
+                console.log("categ "+JSON.stringify(categories));
+            }) 
+        }
+
+        
         getEnchere();
         getAllCategorie();
     },[]);

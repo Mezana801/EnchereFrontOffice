@@ -1,4 +1,4 @@
-import React, { Component,useState, useEffect  } from "react";
+import React, { useState, useEffect  } from "react";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 import EnchereCard from "../component/EnchereCard";
@@ -15,36 +15,36 @@ const MiseEnchere = () => {
         id: id
     }
 
-    const getAllMisesRecent = async () => {
-        const url = "https://wsfrontofficemobile-production-f9f5.up.railway.app/miseenchere/getRecentMises";
-        await fetch(url, {
-           method: 'POST',
-           headers: {"Access-Control-Allow-Origin": "*",'Content-Type': 'application/json'},
-           body: JSON.stringify({
-                id: id
-           })
-        }).then(res => res.json())
-        .then(data =>{
-            console.log("mises limit 10 "+JSON.stringify(data?.data));
-            setMises(data?.data);
-        }) 
-        .catch (err => {
-            console.log("Erreur "+err);
-        });
-    }
-
-    const getEnchere = () => {
-        const url = "https://wsfrontofficemobile-production-f9f5.up.railway.app/enchere/"+id;
-        fetch(url, {
-           method: 'GET',
-           headers: {"Access-Control-Allow-Origin": "*",'Content-Type': 'application/json'},
-        }).then(res => res.json())
-        .then(data => {
-            setenchere(data?.data);
-        }) 
-    }
-
     useEffect( () => {
+        const getAllMisesRecent = async () => {
+            const url = "https://wsfrontofficemobile-production-f9f5.up.railway.app/miseenchere/getRecentMises";
+            await fetch(url, {
+               method: 'POST',
+               headers: {"Access-Control-Allow-Origin": "*",'Content-Type': 'application/json'},
+               body: JSON.stringify({
+                    id: id
+               })
+            }).then(res => res.json())
+            .then(data =>{
+                console.log("mises limit 10 "+JSON.stringify(data?.data));
+                setMises(data?.data);
+            }) 
+            .catch (err => {
+                console.log("Erreur "+err);
+            });
+        }
+    
+        const getEnchere = () => {
+            const url = "https://wsfrontofficemobile-production-f9f5.up.railway.app/enchere/"+id;
+            fetch(url, {
+               method: 'GET',
+               headers: {"Access-Control-Allow-Origin": "*",'Content-Type': 'application/json'},
+            }).then(res => res.json())
+            .then(data => {
+                setenchere(data?.data);
+            }) 
+        }
+        
         getEnchere();
         getAllMisesRecent();
     },[]);

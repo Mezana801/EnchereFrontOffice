@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, {  useEffect, useState } from "react";
 import {Link} from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
@@ -9,17 +9,7 @@ const Header = () => {
     const userLogged = localStorage.getItem("token");
     const [categories,setcategories] = useState([]);
 
-    const getAllCategorie = () => {
-        const url = "https://wsfrontofficemobile-production-f9f5.up.railway.app/categorie";
-        fetch(url, {
-           method: 'GET',
-           headers: {"Access-Control-Allow-Origin": "*",'Content-Type': 'application/json'},
-        }).then(res => res.json())
-        .then(data =>{
-            setcategories(data.data);
-            console.log("categ "+JSON.stringify(categories));
-        }) 
-    }
+   
 
     const actionLogOut = () => {
         localStorage.removeItem("token");
@@ -34,13 +24,26 @@ const Header = () => {
         }
     }
 
-    const menuLogOut = () => {
-        if( userLogged != null ){
-            setlogout(<a onClick={actionLogOut}>Se déconnecter</a>);
-        }
-    }
 
     useEffect( () => {
+        const getAllCategorie = () => {
+            const url = "https://wsfrontofficemobile-production-f9f5.up.railway.app/categorie";
+            fetch(url, {
+               method: 'GET',
+               headers: {"Access-Control-Allow-Origin": "*",'Content-Type': 'application/json'},
+            }).then(res => res.json())
+            .then(data =>{
+                setcategories(data.data);
+                console.log("categ "+JSON.stringify(categories));
+            }) 
+        }
+
+        const menuLogOut = () => {
+            if( userLogged != null ){
+                setlogout(<a onClick={actionLogOut}>Se déconnecter</a>);
+            }
+        }
+        
        menuLogOut();
        getAllCategorie();
     },[]);
@@ -53,31 +56,31 @@ const Header = () => {
                     <div className="header-top-inner">
                         <div className="cnt-account">
                             <ul className="list-unstyled">
-                                <li><a href="#"><i className="icon fa fa-user"></i>My Account</a></li>
-                                <li><a href="#"><i className="icon fa fa-heart"></i>Wishlist</a></li>
-                                <li><a href="#"><i className="icon fa fa-shopping-cart"></i>My Cart</a></li>
-                                <li><a href="#"><i className="icon fa fa-check"></i>Checkout</a></li>
-                                <li><a href="#"><i className="icon fa fa-lock"></i>Login</a></li>
+                                <li><a href=""><i className="icon fa fa-user"></i>My Account</a></li>
+                                <li><a href=""><i className="icon fa fa-heart"></i>Wishlist</a></li>
+                                <li><a href=""><i className="icon fa fa-shopping-cart"></i>My Cart</a></li>
+                                <li><a href=""><i className="icon fa fa-check"></i>Checkout</a></li>
+                                <li><a href=""><i className="icon fa fa-lock"></i>Login</a></li>
                             </ul>
                         </div>
 
                         <div className="cnt-block">
                             <ul className="list-unstyled list-inline">
                                 <li className="dropdown dropdown-small">
-                                    <a href="#" className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span className="value">USD </span><b className="caret"></b></a>
+                                    <a href="" className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span className="value">USD </span><b className="caret"></b></a>
                                     <ul className="dropdown-menu">
-                                        <li><a href="#">USD</a></li>
-                                        <li><a href="#">INR</a></li>
-                                        <li><a href="#">GBP</a></li>
+                                        <li><a href="">USD</a></li>
+                                        <li><a href="">INR</a></li>
+                                        <li><a href="">GBP</a></li>
                                     </ul>
                                 </li>
 
                                 <li className="dropdown dropdown-small">
-                                    <a href="#" className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span className="value">English </span><b className="caret"></b></a>
+                                    <a href="" className="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown"><span className="value">English </span><b className="caret"></b></a>
                                     <ul className="dropdown-menu">
-                                        <li><a href="#">English</a></li>
-                                        <li><a href="#">French</a></li>
-                                        <li><a href="#">German</a></li>
+                                        <li><a href="">English</a></li>
+                                        <li><a href="">French</a></li>
+                                        <li><a href="">German</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -99,7 +102,7 @@ const Header = () => {
                             <form>
                                 <div className="control-group">
                                     <input className="search-field"  placeholder="Rechercher..." />
-                                    <a className="search-button" href="#" ></a>    
+                                    <a className="search-button" href="" ></a>    
                                 </div>
                             </form>
                         </div>
@@ -126,7 +129,7 @@ const Header = () => {
                                         <Link to = {'/'}>Acceuil</Link>
                                     </li>
                                     <li className="dropdown yamm mega-menu">
-                                        <a onClick={actionMyAccount}>Mon compte</a>
+                                        <a href="" onClick={actionMyAccount}>Mon compte</a>
                                     </li>
                                     <li className="active dropdown yamm-fw">
                                        {logout}

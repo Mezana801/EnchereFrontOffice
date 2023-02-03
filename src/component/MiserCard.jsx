@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, {  useState } from "react";
 import MiserList from "./MiseList";
 import './assets/css/alert.css'
 

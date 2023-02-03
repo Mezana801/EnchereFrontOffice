@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const CategorieSideBar = (props) => {
@@ -36,7 +36,7 @@ const CategorieSideBar = (props) => {
                     <ul className="nav"> 
                         { categories.map(categorie => {
                         return (
-                            <li><a onClick={(e) => {handleSubmit(categorie?.id)}}>{categorie.nom}</a></li>
+                            <li><a href="" onClick={(e) => {handleSubmit(categorie?.id)}}>{categorie.nom}</a></li>
                         )
                         })}
                     </ul>

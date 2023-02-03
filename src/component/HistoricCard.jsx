@@ -1,4 +1,4 @@
-import React, { Component,useState, useEffect  } from "react";
+import React from "react";
 
 const HistoricCard = (props) => {
     const historiques = props?.data;
@@ -51,7 +51,7 @@ const HistoricCard = (props) => {
                         <div className="col-sm-6 col-md-6">
                             <div className="row">
                                 <div className="col-sm-6 col-md-6">
-                                    <img src={"/assets/images/"+historique.coverphoto} style={{objectFit: "cover", objectPosition: "center"}} width={150} height={150}/>
+                                    <img alt="" src={"/assets/images/"+historique.coverphoto} style={{objectFit: "cover", objectPosition: "center"}} width={150} height={150}/>
                                 </div>
                                 <div className="col-sm-6 col-md-6">
                                     <h3 className="name">Lot N°{historique.id}</h3>

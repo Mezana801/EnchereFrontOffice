@@ -30,7 +30,7 @@ const EnchereCard = (props) => {
                             <div id="owl-single-product"  height={200}>
                                 <div className="single-product-gallery-item" id="slide1">
                                     {/* <a data-lightbox="image-1" data-title="Gallery" href={"assets/images/"+enchere?.coverphoto} > */}
-                                        <img height={250} width={280} src={"/assets/images/"+enchere?.coverphoto} style={{objectFit: "cover", objectPosition: "center"}}/>
+                                        <img alt="" height={250} width={280} src={"/assets/images/"+enchere?.coverphoto} style={{objectFit: "cover", objectPosition: "center"}}/>
                                     {/* </a> */}
                                 </div>
                             </div>
@@ -40,7 +40,7 @@ const EnchereCard = (props) => {
                                         return (
                                             <div class="item" style={{display: "inline-block", padding: 3}}>
                                                 <a data-lightbox="image-1" data-title="Gallery" href={"/assets/images/"+photo} >
-                                                    <img class="img-responsive" width={70} height={70} style={{objectFit: "cover", objectPosition: "center"}} src={"/assets/images/"+photo} />
+                                                    <img alt="" class="img-responsive" width={70} height={70} style={{objectFit: "cover", objectPosition: "center"}} src={"/assets/images/"+photo} />
                                                 </a>
                                             </div>
                                         )
