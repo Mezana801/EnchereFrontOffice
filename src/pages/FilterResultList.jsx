@@ -24,7 +24,7 @@ const FilterResultList = () => {
                 console.log("categ "+JSON.stringify(categories));
             }) 
         }
-        
+
         getAllCategorie();
     },[]);
 

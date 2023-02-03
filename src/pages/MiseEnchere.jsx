@@ -44,7 +44,7 @@ const MiseEnchere = () => {
                 setenchere(data?.data);
             }) 
         }
-        
+
         getEnchere();
         getAllMisesRecent();
     },[]);

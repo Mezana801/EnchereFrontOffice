@@ -29,7 +29,7 @@ const EnchereHistoric = () => {
               console.log(err);
             }
           };
-          
+
         getHistorics();
     },[]);
 

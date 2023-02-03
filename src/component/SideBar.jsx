@@ -17,7 +17,7 @@ const SideBar = (props) => {
                 console.log("categ "+JSON.stringify(categories));
             }) 
         }
-        
+
         getAllCategorie();
     },[]);
 

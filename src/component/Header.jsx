@@ -9,7 +9,6 @@ const Header = () => {
     const userLogged = localStorage.getItem("token");
     const [categories,setcategories] = useState([]);
 
-   
 
     const actionLogOut = () => {
         localStorage.removeItem("token");

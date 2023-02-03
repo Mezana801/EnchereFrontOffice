@@ -21,7 +21,8 @@ const EnchereCard = (props) => {
         });
     }
 
-    return (
+    if( enchere !== null || enchere !== undefined ){
+        return (
             <div className="detail-block">
                 <div className="row  wow fadeInUp">
       
@@ -30,7 +31,7 @@ const EnchereCard = (props) => {
                             <div id="owl-single-product"  height={200}>
                                 <div className="single-product-gallery-item" id="slide1">
                                     {/* <a data-lightbox="image-1" data-title="Gallery" href={"assets/images/"+enchere?.coverphoto} > */}
-                                        <img alt="" height={250} width={280} src={"/assets/images/"+enchere?.coverphoto} style={{objectFit: "cover", objectPosition: "center"}}/>
+                                        <img alt="" height={250} width={280} src={"https://wsfrontofficemobile-production-f9f5.up.railway.app/images/"+enchere?.coverphoto} style={{objectFit: "cover", objectPosition: "center"}}/>
                                     {/* </a> */}
                                 </div>
                             </div>
@@ -39,8 +40,8 @@ const EnchereCard = (props) => {
                                     { photos?.map(photo => {
                                         return (
                                             <div class="item" style={{display: "inline-block", padding: 3}}>
-                                                <a data-lightbox="image-1" data-title="Gallery" href={"/assets/images/"+photo} >
-                                                    <img alt="" class="img-responsive" width={70} height={70} style={{objectFit: "cover", objectPosition: "center"}} src={"/assets/images/"+photo} />
+                                                <a data-lightbox="image-1" data-title="Gallery" href={"https://wsfrontofficemobile-production-f9f5.up.railway.app/images/"+photo} >
+                                                    <img alt="" class="img-responsive" width={70} height={70} style={{objectFit: "cover", objectPosition: "center"}} src={"https://wsfrontofficemobile-production-f9f5.up.railway.app/images/"+photo} />
                                                 </a>
                                             </div>
                                         )
@@ -125,8 +126,13 @@ const EnchereCard = (props) => {
                         </div>
                     </div>
                 </div>
-        
-    )
+        )}
+        return (
+            <center>
+                <img src="/assets/images/wait.gif" />
+            </center>
+          )
+
     
 }
 

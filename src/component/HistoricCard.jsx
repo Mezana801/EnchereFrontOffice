@@ -43,39 +43,47 @@ const HistoricCard = (props) => {
         }
     }
 
-    return (
-        <div className="col-sm-12 col-md-12">
-            { historiques.map(historique => {
-                return (
-                    <div className="row" style={{ marginBottom: 25, backgroundColor: 'white', padding: 10 }}>
-                        <div className="col-sm-6 col-md-6">
-                            <div className="row">
-                                <div className="col-sm-6 col-md-6">
-                                    <img alt="" src={"/assets/images/"+historique.coverphoto} style={{objectFit: "cover", objectPosition: "center"}} width={150} height={150}/>
-                                </div>
-                                <div className="col-sm-6 col-md-6">
-                                    <h3 className="name">Lot N°{historique.id}</h3>
-                                    <p>Début : {toFRDate(historique?.dateetheure)}</p>
-                                    <p>Durée: {historique?.dureeenchere}</p>
-                                    <p>Prix: <span style={{color: "#59b210"}}>{usd.format(historique.prixdemise)} Ar</span></p>
+    if( historiques.length > 0 ){
+        return (
+            <div className="col-sm-12 col-md-12">
+                { historiques.map(historique => {
+                    return (
+                        <div className="row" style={{ marginBottom: 25, backgroundColor: 'white', padding: 10 }}>
+                            <div className="col-sm-6 col-md-6">
+                                <div className="row">
+                                    <div className="col-sm-6 col-md-6">
+                                        <img alt="" src={"https://wsfrontofficemobile-production-f9f5.up.railway.app/images/"+historique.coverphoto} style={{objectFit: "cover", objectPosition: "center"}} width={150} height={150}/>
+                                    </div>
+                                    <div className="col-sm-6 col-md-6">
+                                        <h3 className="name">Lot N°{historique.id}</h3>
+                                        <p>Début : {toFRDate(historique?.dateetheure)}</p>
+                                        <p>Durée: {historique?.dureeenchere}</p>
+                                        <p>Prix: <span style={{color: "#59b210"}}>{usd.format(historique.prixdemise)} Ar</span></p>
+                                    </div>
                                 </div>
                             </div>
+                            <div className="col-sm-3 col-md-3">
+                                <h4>Description</h4>
+                                <hr />
+                                <p>{historique?.description}</p>
+                            </div>
+                            <div className="col-sm-3 col-md-3">
+                                <h4>Statut</h4>
+                                <hr />
+                                {getStateEnchere(historique)}
+                            </div>
                         </div>
-                        <div className="col-sm-3 col-md-3">
-                            <h4>Description</h4>
-                            <hr />
-                            <p>{historique?.description}</p>
-                        </div>
-                        <div className="col-sm-3 col-md-3">
-                            <h4>Statut</h4>
-                            <hr />
-                            {getStateEnchere(historique)}
-                        </div>
-                    </div>
-                )
-            })}
-        </div>
-    )
+                    )
+                })}
+            </div>
+        )
+    }
+
+    return (
+        <center>
+            <img src="/assets/images/wait.gif" />
+        </center>
+      )
 }
 
 export default HistoricCard
